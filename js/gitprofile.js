@@ -10,9 +10,9 @@ $(document).ready(function() {
 
     $.get(url, function(info) {
       $('.container').prepend(Mustache.render(template, info));
-    }).fail(function() {
+    }).fail(function noInfo() {
       $('.container').prepend("User not found")
-    }).always(function() {
+    }).always(function clearBox() {
       $('input.username').val('');
       });
   });
